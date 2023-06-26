@@ -147,4 +147,4 @@ const Coinpage = ({params}) => {
   )
 }
 
-export default Coinpage
+export default Coinpage;

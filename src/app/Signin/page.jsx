@@ -48,4 +48,4 @@ const Signinpage = () => {
   )
 }
 
-export default page
+export default Signinpage;

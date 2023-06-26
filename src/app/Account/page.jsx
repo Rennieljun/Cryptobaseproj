@@ -29,4 +29,4 @@ const Accountpage = () => {
   )
 }
 
-export default Accountpage
+export default Accountpage;

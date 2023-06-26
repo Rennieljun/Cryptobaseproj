@@ -6,7 +6,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { doc, onSnapshot, updateDoc } from 'firebase/firestore';
 import { db } from '@/app/api/auth/[...nextauth]/route';
 import { UserAuth } from '@/context/AuthContext';
-
+import Image from 'next/image';
 const SavedCoin = () => {
     const [coins, setCoins] = useState([])
     const {user} = UserAuth();
