@@ -1,24 +1,11 @@
 'use client';
 
 import SavedCoin from '@/components/SavedCoin'
-import { UserAuth } from '@/context/AuthContext'
-import { useRouter } from 'next/navigation'
+import { UserAuth } from '@/context/AuthContext';
 import Signin from '@/components/Signin';
-import { useEffect } from 'react';
-import { doc, setDoc } from 'firebase/firestore';
-import { db } from '@/app/api/auth/[...nextauth]/route';
 
-const page = () => {
-    const {user, logout, addData} = UserAuth();
-    const navigate = useRouter();
-    const handleSignOut = async () => {
-        try {
-            await logout()
-            navigate.push('/Home');
-        }catch (e) {
-            console.log(e.message);
-        }
-    }
+const Accountpage = () => {
+    const {user} = UserAuth();
   return (
     <div className='max-w-[1140px] mx-auto'>
         <div className='flex justify-between items-center my-12 py-8 rounded-div'>
@@ -42,4 +29,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Accountpage

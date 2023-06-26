@@ -6,7 +6,7 @@ import { UserAuth } from '@/context/AuthContext';
 import { useState } from 'react';
 import { db } from '@/app/api/auth/[...nextauth]/route';
 import {doc, setDoc} from 'firebase/firestore'
-const page = () => {
+const Signuppage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -59,4 +59,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Signuppage

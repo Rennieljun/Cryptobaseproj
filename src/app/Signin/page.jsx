@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react';
 import { UserAuth } from '@/context/AuthContext';
 
-const page = () => {
+const Signinpage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');

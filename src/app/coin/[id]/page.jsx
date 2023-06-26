@@ -7,7 +7,7 @@ import {Sparklines, SparklinesLine} from 'react-sparklines'
 import {FaTwitter, FaFacebook, FaReddit,FaGithub} from 'react-icons/fa'
 import DOMPurify from 'dompurify';
 
-const page = ({params}) => {
+const Coinpage = ({params}) => {
     const [coin, setCoin] = useState({})
 
     const url = `https://api.coingecko.com/api/v3/coins/${params.id}?localization=false&sparkline=true`
@@ -147,4 +147,4 @@ const page = ({params}) => {
   )
 }
 
-export default page
+export default Coinpage
