@@ -7,10 +7,12 @@ import { useState, useEffect } from 'react';
 import { UserAuth } from '@/context/AuthContext';
 import { arrayUnion, doc, getDoc, updateDoc, onSnapshot} from 'firebase/firestore';
 import { db } from '@/app/api/auth/[...nextauth]/route';
+import {useRouter} from 'next/navigation';
 
 const CoinItem = ({coin}) => {
   const [addedCoin, setAddedCoin] = useState([])
   const {user} = UserAuth();
+  const router = useRouter();
 
   const path = doc(db, 'users', `${user?.email}`);
   const deleteCoin = async (passId) => {
@@ -42,6 +44,7 @@ const CoinItem = ({coin}) => {
       
     }else {
       alert('Please sign in to save coin in your watch list')
+      router.push('/Signup')
     }
   }
     useEffect(()=> {
